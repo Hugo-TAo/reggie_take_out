@@ -5,6 +5,7 @@ com\itheima\reggie\service\impl\SetmealDishServiceImpl.class
 com\itheima\reggie\controller\CategoryController.class
 com\itheima\reggie\service\ISetmealDishService.class
 com\itheima\reggie\service\ISetmealService.class
+com\itheima\reggie\filter\LoginCheckFilter.class
 com\itheima\reggie\service\impl\SetmealServiceImpl.class
 com\itheima\reggie\service\impl\OrdersServiceImpl.class
 com\itheima\reggie\service\IShoppingCartService.class
@@ -41,5 +42,6 @@ com\itheima\reggie\mapper\SetmealDishMapper.class
 com\itheima\reggie\service\impl\EmployeeServiceImpl.class
 com\itheima\reggie\controller\SetmealController.class
 com\itheima\reggie\controller\ShoppingCartController.class
+com\itheima\reggie\entity\dto\EmployeeDto.class
 com\itheima\reggie\service\impl\AddressBookServiceImpl.class
 com\itheima\reggie\service\IAddressBookService.class

@@ -3,6 +3,7 @@ package com.itheima.reggie.controller;
 
 import com.itheima.reggie.comon.R;
 import com.itheima.reggie.entity.Employee;
+import com.itheima.reggie.entity.dto.EmployeeDto;
 import com.itheima.reggie.service.IEmployeeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,4 +35,15 @@ public class EmployeeController {
     public R<Employee> Login(HttpServletRequest request,@RequestBody Employee employee) {
         return employeeService.login(request,employee);
     }
+
+    @PostMapping("/logout")
+    public R logout(HttpServletRequest request){
+        return employeeService.logout(request);
+    }
+
+    @PostMapping
+    public R add(HttpServletRequest request,@RequestBody EmployeeDto employeeDto){
+        return employeeService.add(request,employeeDto);
+    }
+
 }
