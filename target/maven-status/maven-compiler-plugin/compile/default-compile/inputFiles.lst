@@ -2,6 +2,7 @@ C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\service\impl\DishServiceImpl.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\service\impl\OrdersServiceImpl.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\entity\Setmeal.java
+C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\comon\MyMetaObjectHandler.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\entity\Category.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\mapper\SetmealDishMapper.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\service\IOrdersService.java
@@ -12,6 +13,7 @@ C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\service\IAddressBookService.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\entity\Employee.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\entity\User.java
+C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\comon\BaseContext.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\mapper\DishFlavorMapper.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\controller\SetmealController.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\service\impl\ShoppingCartServiceImpl.java

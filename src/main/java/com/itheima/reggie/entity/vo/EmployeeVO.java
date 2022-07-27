@@ -1,5 +1,6 @@
 package com.itheima.reggie.entity.vo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 /**
@@ -8,6 +9,10 @@ import lombok.Data;
  */
 @Data
 public class EmployeeVO {
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long id;
+
     private String username;
 
     private String name;

@@ -26,5 +26,9 @@ public interface IEmployeeService extends IService<Employee> {
 
     R add(HttpServletRequest request,EmployeeDto employeeDto);
 
-    R page(Integer pageNum, Integer pageSize, String name);
+    R page(Integer page, Integer pageSize, String name);
+
+    R update(HttpServletRequest request,Employee employee);
+
+    R getEmployeeById(Long id);
 }

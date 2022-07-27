@@ -72,11 +72,11 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
         Employee employee = new Employee();
         BeanUtils.copyProperties(employeeDto,employee);
         employee.setPassword(DigestUtils.md5DigestAsHex("123456".getBytes()));
-        employee.setCreateTime(LocalDateTime.now());
-        employee.setUpdateTime(LocalDateTime.now());
-        Long empId = (Long) request.getSession().getAttribute("employee");
-        employee.setCreateUser(empId);
-        employee.setUpdateUser(empId);
+//        employee.setCreateTime(LocalDateTime.now());
+//        employee.setUpdateTime(LocalDateTime.now());
+//        Long empId = (Long) request.getSession().getAttribute("employee");
+//        employee.setCreateUser(empId);
+//        employee.setUpdateUser(empId);
         this.save(employee);
         return R.success(employee.getName());
     }
@@ -92,6 +92,7 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
         BeanUtils.copyProperties(employeePage,employeeVOPage);
         employeePage.getRecords().forEach(item->{
             EmployeeVO employeeVO = new EmployeeVO();
+            employeeVO.setId(item.getId());
             employeeVO.setName(item.getName());
             employeeVO.setPhone(item.getPhone());
             employeeVO.setStatus(item.getStatus());
@@ -101,6 +102,24 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
         });
         employeeVOPage.setRecords(employeeVOList);
         return R.success(employeeVOPage);
+    }
+
+    @Override
+    public R update(HttpServletRequest request, Employee employee) {
+        Long eId = (Long) request.getSession().getAttribute("employee");
+        employee.setUpdateUser(eId);
+        employee.setUpdateTime(LocalDateTime.now());
+        this.updateById(employee);
+        return R.success(employee.getName());
+    }
+
+    @Override
+    public R getEmployeeById(Long id) {
+        Employee employee = this.getById(id);
+        if(employee!=null){
+            return R.success(employee);
+        }
+        return R.error("没有查询到员工信息");
     }
 
 

@@ -49,4 +49,14 @@ public class EmployeeController {
         return  employeeService.page(page,pageSize,name);
     }
 
+    @PutMapping
+    public R update(HttpServletRequest request,@RequestBody Employee employee){
+        return employeeService.update(request,employee);
+    }
+
+    @GetMapping("/{id}")
+    public R getEmployeeById(@PathVariable Long id){
+        return employeeService.getEmployeeById(id);
+    }
+
 }
