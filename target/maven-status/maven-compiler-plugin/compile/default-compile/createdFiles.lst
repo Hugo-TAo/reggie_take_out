@@ -18,6 +18,7 @@ com\itheima\reggie\mapper\EmployeeMapper.class
 com\itheima\reggie\mapper\AddressBookMapper.class
 com\itheima\reggie\service\impl\UserServiceImpl.class
 com\itheima\reggie\controller\OrderDetailController.class
+com\itheima\reggie\entity\vo\EmployeeVO.class
 com\itheima\reggie\mapper\UserMapper.class
 com\itheima\reggie\service\IUserService.class
 com\itheima\reggie\controller\OrdersController.class
@@ -42,6 +43,8 @@ com\itheima\reggie\mapper\SetmealDishMapper.class
 com\itheima\reggie\service\impl\EmployeeServiceImpl.class
 com\itheima\reggie\controller\SetmealController.class
 com\itheima\reggie\controller\ShoppingCartController.class
+com\itheima\reggie\config\MyBatisPlusConfig.class
 com\itheima\reggie\entity\dto\EmployeeDto.class
+com\itheima\reggie\comon\PageUtils.class
 com\itheima\reggie\service\impl\AddressBookServiceImpl.class
 com\itheima\reggie\service\IAddressBookService.class

@@ -1,12 +1,16 @@
 package com.itheima.reggie.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.itheima.reggie.comon.PageUtils;
 import com.itheima.reggie.comon.R;
 import com.itheima.reggie.entity.Employee;
 import com.itheima.reggie.entity.dto.EmployeeDto;
+import com.itheima.reggie.entity.vo.EmployeeVO;
 import com.itheima.reggie.mapper.EmployeeMapper;
 import com.itheima.reggie.service.IEmployeeService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
@@ -15,6 +19,8 @@ import org.springframework.util.DigestUtils;
 import javax.servlet.http.HttpServletRequest;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -75,7 +81,27 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
         return R.success(employee.getName());
     }
 
+    @Override
+    public R page(Integer page, Integer pageSize, String name) {
+        Page<Employee> employeePage = new Page<>(page,pageSize);
+        Page<EmployeeVO> employeeVOPage = new Page<>(page,pageSize);
+        this.baseMapper.selectPage(employeePage,new LambdaQueryWrapper<Employee>()
+                .like(StringUtils.isNotEmpty(name),Employee::getName,name)
+                .orderByDesc(Employee::getUpdateTime));
+        List<EmployeeVO> employeeVOList = new ArrayList<>();
+        BeanUtils.copyProperties(employeePage,employeeVOPage);
+        employeePage.getRecords().forEach(item->{
+            EmployeeVO employeeVO = new EmployeeVO();
+            employeeVO.setName(item.getName());
+            employeeVO.setPhone(item.getPhone());
+            employeeVO.setStatus(item.getStatus());
+            employeeVO.setUsername(item.getUsername());
+            employeeVOList.add(employeeVO);
 
+        });
+        employeeVOPage.setRecords(employeeVOList);
+        return R.success(employeeVOPage);
+    }
 
 
 }

@@ -1,18 +1,16 @@
 package com.itheima.reggie.controller;
 
 
+import com.itheima.reggie.comon.PageUtils;
 import com.itheima.reggie.comon.R;
 import com.itheima.reggie.entity.Employee;
 import com.itheima.reggie.entity.dto.EmployeeDto;
 import com.itheima.reggie.service.IEmployeeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -44,6 +42,11 @@ public class EmployeeController {
     @PostMapping
     public R add(HttpServletRequest request,@RequestBody EmployeeDto employeeDto){
         return employeeService.add(request,employeeDto);
+    }
+
+    @GetMapping("/page")
+    public R page(Integer page, Integer pageSize, String name){
+        return  employeeService.page(page,pageSize,name);
     }
 
 }
