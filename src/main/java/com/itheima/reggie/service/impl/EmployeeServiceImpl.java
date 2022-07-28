@@ -72,11 +72,6 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
         Employee employee = new Employee();
         BeanUtils.copyProperties(employeeDto,employee);
         employee.setPassword(DigestUtils.md5DigestAsHex("123456".getBytes()));
-//        employee.setCreateTime(LocalDateTime.now());
-//        employee.setUpdateTime(LocalDateTime.now());
-//        Long empId = (Long) request.getSession().getAttribute("employee");
-//        employee.setCreateUser(empId);
-//        employee.setUpdateUser(empId);
         this.save(employee);
         return R.success(employee.getName());
     }

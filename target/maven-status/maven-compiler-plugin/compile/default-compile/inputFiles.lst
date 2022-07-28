@@ -1,3 +1,4 @@
+C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\entity\vo\DishVO.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\mapper\AddressBookMapper.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\service\impl\DishServiceImpl.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\service\impl\OrdersServiceImpl.java
@@ -16,6 +17,7 @@ C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\comon\BaseContext.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\mapper\DishFlavorMapper.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\controller\SetmealController.java
+C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\service\impl\CommonServiceImpl.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\service\impl\ShoppingCartServiceImpl.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\controller\OrderDetailController.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\mapper\DishMapper.java
@@ -38,6 +40,7 @@ C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\service\IEmployeeService.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\config\MyBatisPlusConfig.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\entity\DishFlavor.java
+C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\controller\CommonController.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\controller\DishController.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\mapper\ShoppingCartMapper.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\controller\ShoppingCartController.java
@@ -54,11 +57,13 @@ C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\service\impl\DishFlavorServiceImpl.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\service\impl\UserServiceImpl.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\entity\dto\EmployeeDto.java
+C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\service\ICommonService.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\mapper\OrderDetailMapper.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\service\impl\EmployeeServiceImpl.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\controller\EmployeeController.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\controller\UserController.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\controller\CategoryController.java
+C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\entity\dto\DishDto.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\service\impl\SetmealServiceImpl.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\mapper\SetmealMapper.java
 C:\Users\14437\Desktop\Project\reggie_take_out\src\main\java\com\itheima\reggie\entity\AddressBook.java

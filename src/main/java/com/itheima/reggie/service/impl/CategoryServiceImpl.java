@@ -16,6 +16,8 @@ import com.itheima.reggie.service.ISetmealService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * <p>
  * 菜品及套餐分类 服务实现类
@@ -63,5 +65,14 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> i
     public R update(Category category) {
         this.updateById(category);
         return R.success("修改成功");
+    }
+
+    @Override
+    public R list(Category category) {
+        List<Category> categoryList = this.baseMapper.selectList(new LambdaQueryWrapper<Category>()
+                .eq(category.getType()!=null,Category::getType,category.getType())
+                .orderByAsc(Category::getSort)
+                .orderByDesc(Category::getUpdateTime));
+        return R.success(categoryList);
     }
 }

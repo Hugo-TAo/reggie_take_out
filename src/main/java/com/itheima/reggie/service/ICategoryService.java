@@ -20,4 +20,6 @@ public interface ICategoryService extends IService<Category> {
     R delete(Long ids);
 
     R update(Category category);
+
+    R list(Category category);
 }

@@ -1,7 +1,13 @@
 package com.itheima.reggie.controller;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.itheima.reggie.comon.R;
+import com.itheima.reggie.entity.Dish;
+import com.itheima.reggie.entity.dto.DishDto;
+import com.itheima.reggie.service.IDishService;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 import org.springframework.stereotype.Controller;
 
@@ -13,8 +19,21 @@ import org.springframework.stereotype.Controller;
  * @author HJT
  * @since 2022-07-25
  */
-@Controller
+@Slf4j
+@RestController
 @RequestMapping("/dish")
 public class DishController {
+    @Autowired
+    private IDishService dishService;
+
+    @PostMapping
+    public R add(@RequestBody DishDto dishDto){
+        return dishService.add(dishDto);
+    }
+
+    @GetMapping("/page")
+    public R page(Integer page, Integer pageSize, String name){
+        return dishService.page(page,pageSize,name);
+    }
 
 }

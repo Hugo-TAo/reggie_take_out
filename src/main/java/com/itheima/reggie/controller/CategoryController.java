@@ -46,4 +46,9 @@ public class CategoryController {
         return categoryService.update(category);
     }
 
+    @GetMapping("/list")
+    public R list(Category category){
+        return categoryService.list(category);
+    }
+
 }

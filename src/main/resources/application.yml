@@ -18,6 +18,9 @@ mybatis-plus:
     db-config:
       id-type: ASSIGN_ID
 
-mybatis:
-  mapper-locations:
-    classpath:mapper/*/*.xml
+#mybatis:
+#  mapper-locations:
+#    classpath:mapper/*/*.xml
+
+reggie:
+  path: C:\Users\14437\Desktop\img\
